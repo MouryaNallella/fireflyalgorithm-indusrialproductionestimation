@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>FIRFLY ALGORITHM</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+
+<body>
+ <div class="login">
+	<h2>FireFly Algorithm for Optimization Problem</h2>
+	<h3> Industrial Prodution Estimation <h3>
+    <form action="{{ url_for('algorithm')}}"method="post">
+    	<h6> Rate of Production<h6><input type="text" name="Rate" placeholder="Enter Rate" required="required" />
+        <h6>Enter First Month Production<h6><input type="text" name="First Month Production" placeholder="First Month Production" required="required" />
+		<h6>Enter Second Month Production<h6><input type="text" name="Second Month Production" placeholder="Second Month Production" required="required" />
+        <button type="submit" onclick="/algorithm" class="btn btn-primary btn-block btn-large">Submit</button>
+    </form>
+   <br>
+   {{ prediction_text }}
+   <img src="{{ user_image }}" style= "width:85%">
+
+
+</body>
+</html>
